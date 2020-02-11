@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorSeleccionarSesion">
+   <children>
+      <ImageView fx:id="imgCartel" fitHeight="150.0" fitWidth="200.0" layoutX="356.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+      <ListView fx:id="listSesiones" layoutX="37.0" layoutY="100.0" onMouseClicked="#seleccionarSesion_OnMouseClicked" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="lbTitulo" layoutX="150.0" layoutY="45.0" text="Label" />
+   </children>
+</AnchorPane>

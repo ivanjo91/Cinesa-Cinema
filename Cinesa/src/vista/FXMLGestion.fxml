@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorGestion">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="14.0" layoutY="14.0" prefHeight="374.0" prefWidth="572.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabCartelera" text="Cartelera">
+            <content>
+              <AnchorPane fx:id="acCartelera" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtTitulo" layoutX="14.0" layoutY="46.0" promptText="Titulo" />
+                        <DatePicker fx:id="dateCalendar" layoutX="14.0" layoutY="91.0" promptText="Fecha" />
+                        <TextField fx:id="txtHora" layoutX="14.0" layoutY="136.0" promptText="Hora 00:00" />
+                        <TextField fx:id="txtSala" layoutX="14.0" layoutY="180.0" promptText="Sala" />
+                        <Pane fx:id="paneImagenCartel" layoutX="286.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
+                           <children>
+                              <ImageView fx:id="imagenCartel" fitHeight="201.0" fitWidth="200.0" onMouseClicked="#cargarImagen_OnMouseClicked" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Button fx:id="btnInsertar" layoutX="23.0" layoutY="279.0" mnemonicParsing="false" onAction="#insertarPelicula_OnAction" text="Añadir Película" />
+                        <Button fx:id="btnModificar" layoutX="133.0" layoutY="279.0" mnemonicParsing="false" onAction="#modificarPelicula_OnAction" text="Modificar Película" />
+                        <Button fx:id="btnResetearCartelera" layoutX="330.0" layoutY="279.0" mnemonicParsing="false" onAction="#resetearCartelera_OnAction" text="Resetear Cartelera" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabSalas" text="Salas">
+               <content>
+                  <AnchorPane fx:id="acSalas" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="comboSalas" layoutX="118.0" layoutY="31.0" onAction="#comboSalas_OnAction" prefWidth="150.0" />
+                        <TextField fx:id="txtIdSala" layoutX="119.0" layoutY="78.0" />
+                        <TextField fx:id="txtFilas" layoutX="119.0" layoutY="124.0" />
+                        <TextField fx:id="txtColumnas" layoutX="119.0" layoutY="166.0" />
+                        <Button fx:id="btnInsertarSala" layoutX="47.0" layoutY="254.0" mnemonicParsing="false" onAction="#btnInsertarSala_OnAction" text="Insertar Sala" />
+                        <Button fx:id="btnModificarSala" layoutX="147.0" layoutY="254.0" mnemonicParsing="false" onAction="#btnModificarSala_OnAction" text="Modificar Sala" />
+                        <Label layoutX="33.0" layoutY="35.0" text="Salas:" />
+                        <Label layoutX="14.0" layoutY="82.0" text="Numero de Sala:" />
+                        <Label layoutX="45.0" layoutY="128.0" text="Filas:" />
+                        <Label layoutX="30.0" layoutY="170.0" text="Columnas:" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabFacturacion" text="Facturacion">
+               <content>
+                  <AnchorPane fx:id="acFacturacion" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnFacturacionSemanal" layoutX="211.0" layoutY="81.0" mnemonicParsing="false" onAction="#btnFacturacionSemana_OnAction" prefHeight="32.0" prefWidth="126.0" text="Facturacion Semanal" />
+                        <Label fx:id="lbFacturacionSemanal" layoutX="167.0" layoutY="155.0" prefHeight="35.0" prefWidth="215.0" style="-fx-border-color: black;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="lbFacturacionSemanalEuros" layoutX="167.0" layoutY="208.0" prefHeight="37.0" prefWidth="215.0" style="-fx-border-color: black;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

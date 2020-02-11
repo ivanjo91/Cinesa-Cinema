@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ac" onContextMenuRequested="#GestionCartelera_ContextMenu" onScroll="#verPanelEntrada_OnScroll" prefHeight="270.0" prefWidth="326.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorMenuPeliculas">
+   <children>
+      <AnchorPane fx:id="acGestion" maxWidth="1.7976931348623157E308" prefHeight="59.0" prefWidth="326.0" visible="false">
+         <children>
+            <TextField fx:id="txtBarcode" editable="false" layoutX="98.0" layoutY="17.0" onKeyTyped="#KeyTyped_Barcode" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0" />
+            <Label fx:id="lbBandera" prefHeight="10.0" prefWidth="25.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Cinesa.jnlp">
+  <information>
+    <title>Cinesa</title>
+    <vendor>David</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Cinesa.jar" size="29253" download="eager" />
+    <jar href="lib\itextpdf-5.5.9.jar" size="2287148" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.18-bin.jar" size="775587" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Cinesa" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="cinesa.Cinesa"  name="Cinesa" />
+  <update check="always"/>
+</jnlp>
